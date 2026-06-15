@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard Logístico Inteligente</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<aside class="sidebar">
+
+    <h2>📦 Logística</h2>
+
+    <div class="filtros">
+
+        <label>Transportadora</label>
+        <select id="transportadoraFiltro">
+            <option value="Todos">Todos</option>
+        </select>
+
+        <label>Região</label>
+        <select id="regiaoFiltro">
+            <option value="Todos">Todos</option>
+        </select>
+
+    </div>
+
+</aside>
+
+<main>
+
+    <header>
+        <h1>Dashboard Inteligente de Monitoramento</h1>
+    </header>
+
+    <section class="kpis">
+
+        <div class="card">
+            <span>Total</span>
+            <h2 id="total"></h2>
+        </div>
+
+        <div class="card">
+            <span>Atrasadas</span>
+            <h2 id="atrasadas"></h2>
+        </div>
+
+        <div class="card">
+            <span>No Prazo</span>
+            <h2 id="prazo"></h2>
+        </div>
+
+        <div class="card">
+            <span>Taxa de Atraso</span>
+            <h2 id="taxa"></h2>
+        </div>
+
+    </section>
+
+    <section class="graficos">
+
+        <div class="grafico">
+            <h3>Transportadoras</h3>
+            <canvas id="transportadorasChart"></canvas>
+        </div>
+
+        <div class="grafico">
+            <h3>Regiões Críticas</h3>
+            <canvas id="regioesChart"></canvas>
+        </div>
+
+    </section>
+
+    <section class="ranking">
+
+        <h3>🚨 Ranking de Criticidade</h3>
+
+        <div id="rankingContainer"></div>
+
+    </section>
+
+    <section class="tabela">
+
+        <input
+            type="text"
+            id="pesquisa"
+            placeholder="Pesquisar entrega..."
+        >
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Transportadora</th>
+                    <th>Região</th>
+                    <th>Prazo</th>
+                    <th>Real</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody"></tbody>
+
+        </table>
+
+    </section>
+
+</main>
+```
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
